@@ -11,3 +11,4 @@ build
 publish
 *.log
 tvmagic
+server/web/static.go

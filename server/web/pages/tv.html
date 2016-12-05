@@ -1,0 +1,41 @@
+<form action="/tvs/persist.do" method="post" autocomplete="off" class="form-horizontal">
+    <input id="id" name="id" type="hidden" value="<?.TV.Id?>">
+    <input id="type" name="location" type="hidden" value="<?.TV.Location.Id?>">
+    <?if .Err?>
+    <div class="has-error">
+    <span class="help-block">
+        <?.Err?>
+        </span>
+    </div>
+    <?end?>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" name="name" class="form-control" placeholder="Identification" value="<?.TV.Name?>">
+        <span class="help-block">
+            Only alpha numeric characters are allowed.
+        </span>
+    </div>
+    <div class="form-group">
+        <label for="url">URL to redirect</label>
+        <input type="text" name="url" class="form-control" placeholder="URL to redirect" value="<?.TV.URL?>">
+        <span class="help-block">
+            Valid URL with is expected (eg. http://www.vmware.com)
+        </span>
+    </div>
+    <div class="form-group">
+        <label for="on">Switch on</label>
+        <input type="time" name="on" class="form-control" value="<?.TV.On?>">
+        <span class="help-block">
+            Time (in format HH:MM) when the TV should be switched on. If empty, power management will be disabled.
+        </span>
+    </div>
+    <div class="form-group">
+        <label for="off">Switch off</label>
+        <input type="time" name="off" class="form-control" value="<?.TV.Off?>">
+        <span class="help-block">
+            Time (in format HH:MM) when the TV should be switched off. If empty, power management will be disabled.
+        </span>
+    </div>
+    <button class="btn btn-default" name="cancel" type="submit" value="cancel">Cancel</button>
+    <button class="btn btn-primary" name="persist" type="submit" value="persist">Apply</button>
+</form>

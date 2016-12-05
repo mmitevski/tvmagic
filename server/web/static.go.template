@@ -1,0 +1,23 @@
+package web
+
+func init() {
+	resources.files = make(map[string]*resource)
+	resources.templates = make(map[string]*[]byte)
+<?- range $key, $value := .Templates ?>
+	resources.templates["<?$key?>"] = &[]byte{
+	<?range $code := $value -?>
+		<? $code -?>,
+	<?- end ?>
+	}
+<?end?>
+<?- range $key, $value := .Files ?>
+	resources.files["<?$key?>"] = &resource{
+		Content: &[]byte{
+	<?range $code := $value.Content -?>
+		<? $code -?>,
+	<?- end ?>
+		},
+		ContentType: "<?$value.ContentType?>",
+	}
+<?end?>
+}

@@ -1,0 +1,16 @@
+<div class="jumbotron">
+    <h1>Welcome to TV Magic</h1>
+    <p>
+        <?.IntroSubTitle?>
+    </p>
+</div>
+
+<h2>Number of TVs by office location</h2>
+<ul class="list-group">
+    <?range $item := .Locations?>
+    <li class="list-group-item">
+        <span class="badge"><?$item.Count?></span>
+        <?$item.Name?>
+    </li>
+    <?end?>
+</ul>

@@ -1,0 +1,19 @@
+<form action="/locations/persist.do" method="post" autocomplete="off">
+    <input id="id" name="id" type="hidden" value="<?.Location.Id?>">
+    <?if .Err?>
+    <div class="has-error">
+    <span class="help-block">
+        <?.Err?>
+        </span>
+    </div>
+    <?end?>
+    <div class="form-group">
+        <label for="location">Office location</label>
+        <input type="text" name="name" class="form-control" id="location" placeholder="City" value="<?.Location.Name?>" size="80">
+        <span class="help-block">
+            Only alpha numeric characters are allowed.
+        </span>
+    </div>
+    <button class="btn btn-default" name="cancel" type="submit" value="cancel">Cancel</button>
+    <button class="btn btn-primary" name="persist" type="submit" value="persist">Apply</button>
+</form>
