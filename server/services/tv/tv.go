@@ -12,7 +12,7 @@ import (
 	"fmt"
 	"strings"
 	"log"
-	"supervisia/foundation/formatted"
+	"github.com/mmitevski/transactions/formatted"
 )
 
 type TV struct {
