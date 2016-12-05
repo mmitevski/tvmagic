@@ -1,0 +1,12 @@
+target
+.idea
+.settings
+.project
+.classpath
+*.iml
+*~
+\#*#
+build
+.DS_Store
+publish
+*.log
