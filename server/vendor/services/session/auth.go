@@ -9,8 +9,8 @@ import (
 	"github.com/go-zoo/bone"
 	"github.com/mmitevski/sessions"
 	"github.com/mmitevski/sessions/memory"
-	"github.com/mmitevski/tvmagic/server/common"
 	"github.com/mmitevski/sessions/security"
+	"common"
 )
 
 var sm *sessions.Manager

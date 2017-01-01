@@ -3,15 +3,15 @@ package tv
 import (
 	"errors"
 	"github.com/mmitevski/transactions/db"
-	"github.com/mmitevski/tvmagic/server/web"
 	"io"
 	"net/http"
 	"strconv"
-	"github.com/mmitevski/tvmagic/server/common"
 	"github.com/go-zoo/bone"
 	"fmt"
 	"log"
 	"strings"
+	"web"
+	"common"
 )
 
 type Location struct {

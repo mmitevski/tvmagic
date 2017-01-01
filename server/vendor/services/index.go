@@ -4,9 +4,9 @@ import (
 	"net/http"
 	"github.com/go-zoo/bone"
 	"io"
-	"github.com/mmitevski/tvmagic/server/web"
-	"github.com/mmitevski/tvmagic/server/common"
 	"github.com/mmitevski/transactions/db"
+	"common"
+	"web"
 )
 
 type locationInfo struct {

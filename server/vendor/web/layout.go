@@ -8,7 +8,7 @@ import (
 	"text/template"
 	"log"
 	"strings"
-	"github.com/mmitevski/tvmagic/server/services/session"
+	"services/session"
 )
 
 type MainPageData struct {

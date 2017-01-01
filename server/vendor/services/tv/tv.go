@@ -7,12 +7,12 @@ import (
 	"strconv"
 	"github.com/go-zoo/bone"
 	"io"
-	"github.com/mmitevski/tvmagic/server/web"
-	"github.com/mmitevski/tvmagic/server/common"
 	"fmt"
 	"strings"
 	"log"
-	"github.com/mmitevski/transactions/formatted"
+	"common"
+	"web"
+	"formatted"
 )
 
 type TV struct {

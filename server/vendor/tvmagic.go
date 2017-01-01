@@ -3,14 +3,14 @@ package main
 import (
 	"net/http"
 	"github.com/go-zoo/bone"
-	"github.com/mmitevski/tvmagic/server/common"
-	"github.com/mmitevski/tvmagic/server/services/tv"
-	"github.com/mmitevski/tvmagic/server/web"
-	"github.com/mmitevski/tvmagic/server/services"
 	"log"
 	"time"
 	"github.com/nytimes/gziphandler"
-	"github.com/mmitevski/tvmagic/server/services/session"
+	"common"
+	"services"
+	"services/tv"
+	"web"
+	"services/session"
 )
 
 func LoggingHandler(h http.Handler) http.Handler {
